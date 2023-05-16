@@ -72,6 +72,7 @@ void concurrent_task(int min, int max, promise<double>* result) {
     sum += r.get(); // future .get获取每个任务的返回值
   }
     //   return sum;
+    
     result->set_value(sum);
     cout << "concurrent_task finish" << endl;
 }
